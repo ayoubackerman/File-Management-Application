@@ -1,1 +1,1 @@
-# BIS_INTEG_SI
+The Local File Management System is a JavaFX desktop application designed to provide a secure and efficient way to manage local files on a computer. The application incorporates user authentication, file organization, and tagging features to enhance file accessibility and management.
