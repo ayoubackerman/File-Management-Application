@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anch" prefHeight="634.0" prefWidth="455.0" style="-fx-background-color: pink;" stylesheets="@../CssStyle/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetfx.LoginController">
+   <children>
+      <ImageView fitHeight="304.0" fitWidth="455.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/image/Construire-un-formulaire-de-connexion-WordPress-personnalise-avec-une-interface.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="mailField" layoutX="97.0" layoutY="360.0" prefHeight="26.0" prefWidth="234.0" promptText="Email/Nom D'utilisateur" />
+      <PasswordField fx:id="mdpField" layoutX="97.0" layoutY="418.0" prefHeight="26.0" prefWidth="233.0" promptText="Mot de passe" />
+      <Button fx:id="Connect" layoutX="152.0" layoutY="489.0" mnemonicParsing="false" onAction="#Connexion" opacity="0.87" text="Se connecter" />
+      <Hyperlink fx:id="reg" layoutX="238.0" layoutY="585.0" onAction="#Register" prefHeight="23.0" prefWidth="111.0" text="Créez-en un !">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Hyperlink>
+      <Label layoutX="14.0" layoutY="589.0" text="Vous n'avez pas encore de compte ?">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="53.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/image/pngfind.com-users-icon-png-3828872.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="43.0" layoutX="58.0" layoutY="420.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/image/lock-emoji-by-twitter.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

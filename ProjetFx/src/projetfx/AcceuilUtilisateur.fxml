@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="541.0" prefWidth="943.0" style="-fx-background-color: white;" stylesheets="@../CssStyle/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetfx.AcceuilUtilisateurController">
+   <children>
+      <ImageView fitHeight="350.0" fitWidth="943.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/image/—Pngtree—taobao%20vector%20cartoon%20technology%20computer_1012768.jpg" />
+         </image>
+      </ImageView>
+      <TabPane layoutY="70.0" prefHeight="414.0" prefWidth="943.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Ajouter">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="368.0" prefWidth="922.0">
+                     <children>
+                        <TextField fx:id="act" layoutX="268.0" layoutY="49.0" promptText="Auteur" />
+                        <TextField fx:id="titre" layoutX="268.0" layoutY="89.0" promptText="Titre" />
+                        <TextField fx:id="tags" layoutX="268.0" layoutY="136.0" promptText="Tags" />
+                        <TextArea fx:id="res" layoutX="268.0" layoutY="171.0" prefHeight="68.0" prefWidth="200.0" promptText="Résumé" />
+                        <TextArea fx:id="comm" layoutX="268.0" layoutY="249.0" prefHeight="76.0" prefWidth="200.0" promptText="Commentaire" />
+                        <Text fx:id="ptag" fill="#e80707" layoutX="444.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" wrappingWidth="5.80389404296875" />
+                        <Text fx:id="ptitre" fill="#e80707" layoutX="443.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" wrappingWidth="4.20391845703125" />
+                        <Text fx:id="rcomm" fill="#214baf" layoutX="20.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Les champs avec * sont obligatoires." wrappingWidth="205.5999999999999" />
+                        <Button fx:id="Ajoute" layoutX="571.0" layoutY="123.0" mnemonicParsing="false" onAction="#Ajoutefichier" prefHeight="26.0" prefWidth="126.0" text="Ajouter un fichier" />
+                        <TextField fx:id="urlx" layoutX="268.0" layoutY="14.0" prefHeight="26.0" prefWidth="222.0" promptText="Url du fichier" />
+                        <Button fx:id="save" layoutX="571.0" layoutY="62.0" mnemonicParsing="false" onAction="#Enrefichier" prefHeight="26.0" prefWidth="126.0" text="Enregistrer" />
+                        <TextField fx:id="autretag" layoutX="268.0" layoutY="97.0" prefHeight="35.0" prefWidth="167.0" promptText="Autre tags" />
+                        <Label fx:id="autags" layoutX="190.0" layoutY="14.0" prefHeight="32.0" prefWidth="356.0" text="Voulez vous ajouter d'autre tags ?" textFill="#af3737">
+                           <font>
+                              <Font name="System Bold Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="atags" layoutX="419.0" layoutY="172.0" mnemonicParsing="false" onAction="#Autretags" prefHeight="35.0" prefWidth="95.0" text="Ajouter" />
+                        <Button fx:id="Ann" layoutX="226.0" layoutY="172.0" mnemonicParsing="false" onAction="#Annuler" prefHeight="35.0" prefWidth="95.0" text="Annuler" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="supprimer_fichier" text="Supprimer">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="Supp_fich" layoutX="301.0" layoutY="294.0" mnemonicParsing="false" onAction="#Supprimer" prefHeight="25.0" prefWidth="116.0" text="Supprimer" />
+                        <TableView fx:id="Fichier" layoutX="82.0" layoutY="24.0" prefHeight="259.0" prefWidth="658.0">
+                           <columns>
+                              <TableColumn fx:id="Id_file" prefWidth="91.0" text="id" />
+                              <TableColumn fx:id="Furl" prefWidth="268.79998779296875" text="Url" />
+                              <TableColumn fx:id="Faut" minWidth="0.0" prefWidth="103.99996948242188" text="Auteur" />
+                              <TableColumn fx:id="Ftitre" prefWidth="193.60001220703123" text="Titre" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="idx" layoutX="689.0" layoutY="69.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="mod_ad" text="Modifier / Recherher">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="415.0" prefWidth="855.0">
+                     <children>
+                        <TableView fx:id="ad_mod" layoutX="1.0" layoutY="29.0" prefHeight="338.0" prefWidth="601.0">
+                           <columns>
+                              <TableColumn fx:id="mod_id" prefWidth="42.0" text="id" />
+                              <TableColumn fx:id="mod_url" prefWidth="128.0000228881836" text="Url" />
+                              <TableColumn fx:id="mod_auteur" prefWidth="99.2000732421875" text="Auteur" />
+                              <TableColumn fx:id="mod_titre" prefWidth="93.59991455078125" text="Titre" />
+                              <TableColumn fx:id="mod_resume" prefWidth="99.20001220703125" text="Resumé" />
+                              <TableColumn fx:id="mod_commentaire" prefWidth="138.40008544921875" text="Commentaire" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="titremodif" layoutX="611.0" layoutY="87.0" promptText="Titre" />
+                        <Button fx:id="Modiff" layoutX="726.0" layoutY="325.0" mnemonicParsing="false" onAction="#Modifier" prefHeight="26.0" prefWidth="114.0" text="Modifier" />
+                        <TextArea fx:id="resume" layoutX="609.0" layoutY="134.0" prefHeight="70.0" prefWidth="200.0" promptText="Resumé" />
+                        <TextArea fx:id="commentaire" layoutX="609.0" layoutY="216.0" prefHeight="63.0" prefWidth="200.0" promptText="Commentaire" />
+                        <TextField fx:id="idmodif" layoutX="611.0" layoutY="6.0" promptText="ID" />
+                        <TextField fx:id="auteurmodif" layoutX="611.0" layoutY="50.0" promptText="Auteur" />
+                        <TextField fx:id="recherche" layoutX="1.0" layoutY="1.0" prefHeight="26.0" prefWidth="228.0" promptText="Recherche...." style="-fx-background-color: Pink;" />
+                        <FontAwesomeIcon iconName="SEARCH" layoutX="217.0" layoutY="18.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Button fx:id="out" layoutX="726.0" layoutY="496.0" mnemonicParsing="false" onAction="#Logout" prefHeight="30.0" prefWidth="114.0" text="Deconnexion">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="bvn" layoutX="275.0" layoutY="19.0" prefHeight="30.0" prefWidth="343.0">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

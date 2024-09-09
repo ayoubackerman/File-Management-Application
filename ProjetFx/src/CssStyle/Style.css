@@ -1,0 +1,147 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.button{
+    -fx-background-color: 
+        #090a0c,
+        
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+}
+
+.text-field {
+  -fx-border-color: grey;
+  -fx-border-width: 0 0 1 0; 
+  -fx-background-color: transparent;
+}
+.text-area {
+  -fx-border-color: grey;
+  -fx-border-width: 0 0 1 0; 
+  -fx-background-color: transparent;
+}
+.tab-pane > .tab-header-area > .headers-region > .tab:top {
+    -fx-border-color: #a3a7a8;
+    -fx-border-radius: 5 5 0 0;
+    -fx-background-color: white;
+    -fx-pref-height: 40px;  
+    -fx-background-insets: 0;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab:selected:top {
+    -fx-border-color: #2381E9 #a3a7a8 #a3a7a8 #a3a7a8;
+    -fx-border-width: 5 1 1 1;   
+    -fx-border-radius: 5 5 0 0;
+    -fx-background-color: white;
+    -fx-pref-height: 40px;  
+    -fx-background-insets: 0;
+}
+
+
+.tab-pane > .tab-header-area > .headers-region > .tab:selected > .tab-container > .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #2381E9;
+    -fx-font-weight: bold;
+}
+
+
+.tab-pane > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #2381E9;
+    -fx-font-weight: bold;
+}
+
+
+.tab-pane > .tab-header-area > .tab-header-background {
+    -fx-background-color:white;
+    -fx-border-color: #a3a7a8;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-insets: 0;
+    -fx-pref-height: 45px;  
+}
+.table-cell {     
+    -fx-padding: 0.5em 0.5em 0.1em 0.3em;
+    -fx-border-color: -fx-box-border -fx-box-border transparent transparent;  
+    -fx-font: 13px "Segoe UI";    
+    -fx-border-insets: 0;
+}
+
+
+.table-cell:hover {
+    -fx-background-color: #9900ff;
+}
+
+.table-row-cell:empty, .table-cell:empty:hover {
+    -fx-background-color: whitesmoke;
+}
+ 
+
+.table-row-cell:empty .table-cell {
+    -fx-border-width: 0px;
+}
+
+
+.table-view:row-selection .table-row-cell:filled:hover { 
+    -fx-background-color: rgba(28, 183, 236, 0.25);
+}
+
+
+.table-view:row-selection .table-row-cell:filled:selected:hover { 
+    -fx-background-color: rgba(228, 183, 236, 0.90);
+}
+
+
+.table-view:row-selection .table-row-cell:filled:selected { 
+    -fx-background-color: rgba(28, 183, 236, 0.65);
+}
+
+
+.table-view, .table-view:focused {
+  -fx-background-color: transparent,-fx-box-border,-fx-control-inner-background;
+  -fx-background-insets: -1.4, 0, 1;
+  -fx-background-radius: 1.4, 0, 0;
+}
+ 
+
+.table-view .column-header .label{
+    -fx-text-fill: #52677A;
+    -fx-alignment: CENTER;
+}
+
+
+.table-view .column-header:hover {
+    -fx-background-color: whitesmoke;
+}
+
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: white;    
+    -fx-size: 45;
+    -fx-border-color: -fx-box-border;
+    -fx-border-width: 0 1 3 0;
+    -fx-border-insets: 0;
+}
+
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+
+.table-view .show-hide-columns-button {
+    -fx-background-color: white;
+    -fx-border-color: -fx-box-border;
+    -fx-border-insets: 0;
+}

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="561.0" prefWidth="1182.0" style="-fx-background-color: white;" stylesheets="@../CssStyle/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetfx.AcceuilAdminController">
+   <children>
+      <ImageView fitHeight="562.0" fitWidth="1182.0" layoutX="-1.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/image/—Pngtree—taobao%20vector%20cartoon%20technology%20computer_1012768.jpg" />
+         </image>
+      </ImageView>
+      <TabPane layoutY="65.0" prefHeight="443.0" prefWidth="1182.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab fx:id="liste_util" text="Liste des utilisateurs">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="329.0" prefWidth="855.0">
+                     <children>
+                        <TableView fx:id="tab" layoutX="291.0" layoutY="1.0" prefHeight="394.0" prefWidth="614.0">
+                           <columns>
+                              <TableColumn fx:id="name" prefWidth="148.00003051757812" text="Nom" />
+                              <TableColumn fx:id="last" minWidth="0.0" prefWidth="179.19998168945312" text="Prenom" />
+                              <TableColumn fx:id="mail" prefWidth="282.4000244140625" text="Mail" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="favor_util" text="fichiers favoris par utilisateur">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="382.0" prefWidth="950.0">
+                     <children>
+                        <TableView fx:id="Tabfich" layoutX="573.0" layoutY="49.0" prefHeight="299.0" prefWidth="413.0">
+                          <columns>
+                              <TableColumn fx:id="idfich" prefWidth="87.19997864961624" text="ID Fichier" />
+                            <TableColumn fx:id="aute" prefWidth="122.4000244140625" text="Auteur" />
+                            <TableColumn fx:id="titr" prefWidth="198.39996337890625" text="Titre" />
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="Listeutils" layoutY="-1.0" prefHeight="398.0" prefWidth="487.0">
+                          <columns>
+                            <TableColumn fx:id="idutil" prefWidth="168.8000030517578" text="ID Utilisateur" />
+                              <TableColumn fx:id="nomutil" prefWidth="158.40003967285156" text="Nom" />
+                              <TableColumn fx:id="preutil" prefWidth="158.39996337890625" text="Prenom" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="cons" layoutX="943.0" layoutY="352.0" mnemonicParsing="false" onAction="#Consulter" prefHeight="26.0" prefWidth="162.0" text="Consulter" />
+                        <TextField fx:id="idd" disable="true" layoutX="573.0" layoutY="370.0" />
+                        <Label layoutX="700.0" prefHeight="43.0" prefWidth="357.0" stylesheets="@../CssStyle/Style.css" text="Liste des fichiers" textFill="#df0404" fx:id="xs">
+                           <font>
+                              <Font name="System Bold Italic" size="24.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="mod_ad" text="Liste des tags utilisés par un utilisateur ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="415.0" prefWidth="855.0">
+                     <children>
+                        <TableView fx:id="Tabfortag" layoutX="192.0" layoutY="33.0" prefHeight="330.0" prefWidth="282.0">
+                          <columns>
+                            <TableColumn fx:id="taggs" prefWidth="281.6000122070312" text="Tags" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="util_id" layoutX="568.0" layoutY="110.0" prefHeight="26.0" prefWidth="169.0" promptText="ID D'utilisateur" />
+                        <Button fx:id="Valid" layoutX="798.0" layoutY="106.0" mnemonicParsing="false" onAction="#Valider" prefHeight="35.0" prefWidth="86.0" text="Valider" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tag_nbrutil" text="Liste des tags différents et Nombre d’utilisateurs">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Tagdiff" layoutX="245.0" layoutY="14.0" prefHeight="362.0" prefWidth="343.0">
+                          <columns>
+                            <TableColumn fx:id="itag" prefWidth="330.3999931335449" text="Tags" />
+                          </columns>
+                        </TableView>
+                        <Label fx:id="nbru" layoutX="616.0" layoutY="151.0" prefHeight="44.0" prefWidth="467.0" textFill="#9f3232">
+                           <font>
+                              <Font name="System Bold Italic" size="22.0" />
+                           </font></Label>
+                        <Button fx:id="Nbr" layoutX="653.0" layoutY="60.0" mnemonicParsing="false" onAction="#AfficheNbrUtil" prefHeight="35.0" prefWidth="93.0" text="Cherche" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="util_partag" text="Liste des utilisateurs pour un tag donnée">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Utiliss" layoutX="290.0" layoutY="63.0" prefHeight="334.0" prefWidth="519.0">
+                          <columns>
+                            <TableColumn fx:id="Nomutils" prefWidth="148.0" text="Nom" />
+                            <TableColumn fx:id="prenutils" prefWidth="192.800048828125" text="Prenom" />
+                              <TableColumn fx:id="ndutil" prefWidth="175.99993896484375" text="Nom d'utilisateur" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="Cherchtag" layoutX="405.0" layoutY="9.0" prefHeight="42.0" prefWidth="260.0" promptText="Cherche les utilisateur par un tag" />
+                        <Button fx:id="Cherutil" layoutX="693.0" layoutY="13.0" mnemonicParsing="false" onAction="#ChercheUtilParTag" text="Lister" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Button fx:id="out" layoutX="1061.0" layoutY="519.0" mnemonicParsing="false" onAction="#Logout" prefHeight="30.0" prefWidth="114.0" text="Deconnection">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="bvn" layoutX="462.0" layoutY="21.0" prefHeight="30.0" prefWidth="343.0">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="634.0" prefWidth="455.0" style="-fx-background-color: pink;" stylesheets="@../CssStyle/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetfx.InscriptionController">
+   <children>
+      <ImageView fitHeight="326.0" fitWidth="455.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/image/Construire-un-formulaire-de-connexion-WordPress-personnalise-avec-une-interface.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="ancho" layoutX="-1.0" layoutY="-1.0" prefHeight="634.0" prefWidth="455.0">
+         <children>
+            <TextField fx:id="nom" layoutX="144.0" layoutY="317.0" promptText="Nom" />
+            <TextField fx:id="pren" layoutX="143.0" layoutY="360.0" promptText="Prénom" />
+            <TextField fx:id="mail" layoutX="144.0" layoutY="402.0" promptText="Email" />
+            <TextField fx:id="numero" layoutX="144.0" layoutY="448.0" promptText="Nom d'utilisateur" />
+            <PasswordField fx:id="mdp" layoutX="144.0" layoutY="495.0" promptText="Mot de passe" />
+            
+                  <Label layoutX="172.0" layoutY="24.0" prefHeight="35.0" prefWidth="176.0" text="Inscription" textAlignment="RIGHT" textFill="#843d3d">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="SaveData" layoutX="318.0" layoutY="564.0" mnemonicParsing="false" onAction="#Enregistrer" prefHeight="35.0" prefWidth="100.0" text="Enregistrer" />
+            <Button layoutX="62.0" layoutY="564.0" mnemonicParsing="false" onAction="#Retourner" prefHeight="35.0" prefWidth="100.0" text="Retourner" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
